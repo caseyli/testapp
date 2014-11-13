@@ -1,0 +1,12 @@
+h1 {
+  background:#000;
+  color:white;
+}
+
+a {
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
