@@ -1,6 +1,11 @@
+body {
+  margin:0;
+}
+
 h1 {
-  background:#000;
-  color:white;
+  /*background:#000;
+  color:white;*/
+  text-align:center;
 }
 
 a {
@@ -9,4 +14,34 @@ a {
 
 a:hover {
   text-decoration:underline;
+}
+
+
+.button-link {
+  display:inline-block;
+  font-size:50px;
+
+  padding: 25px;
+  margin: 20px;
+  background-color: red;
+}
+
+.container {
+  width:960px;
+  /*border:1px solid gray;*/
+  padding:15px;
+  margin:0px auto;
+  color:white;
+}
+
+.section {
+  /*border:2px solid red;*/
+}
+
+.main-section {
+  background:#333;
+}
+
+.about-section {
+  background:blue;
 }
