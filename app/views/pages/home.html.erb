@@ -1,1 +1,19 @@
-<h1>Welcome home!</h1>
+<h1>Dear <%= @username %>,</h1>
+
+<p>
+  We have billed your account in the amount of <%= @user_balance %>.
+</p>
+
+<p>
+  Please pay by <%= @user_due_date %>.
+</p>
+
+<ul>
+  <% @usage_values.each_with_index do |value, index| %>
+    <li>Your data usage for week <%= index + 1 %> was <%= value %>GB.</li>
+  <% end %>
+</ul>
+
+<p>
+  Thank you.
+</p>

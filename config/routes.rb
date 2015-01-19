@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  # type request => controller and action
+  
+  root "pages#home"
+
+  # type-of-request URL => controller#action
   get "/home" => "pages#home"
   get "/house" => "pages#home"
+
 end
