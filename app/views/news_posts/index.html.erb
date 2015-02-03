@@ -1,0 +1,26 @@
+<h1>News Posts</h1>
+
+<p>
+  Welcome to the News Posts page.
+</p>
+
+<p>
+  Number of posts <%= @news_posts.size %>
+</p>
+
+<!--
+
+@news_posts.each do |news_post|
+   # do something
+   puts news_post.title
+   puts news_post.body
+end
+
+-->
+
+<% @news_posts.each do |news_post| %>
+  <h2><%= news_post.title %></h2>
+  <p>
+    <%= news_post.body %>
+  </p>
+<% end %>
