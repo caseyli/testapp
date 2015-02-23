@@ -8,19 +8,16 @@
   Number of posts <%= @news_posts.size %>
 </p>
 
-<!--
-
-@news_posts.each do |news_post|
-   # do something
-   puts news_post.title
-   puts news_post.body
-end
-
--->
+<%= link_to "New News Post", "/news_posts/new" %>
 
 <% @news_posts.each do |news_post| %>
-  <h2><%= news_post.title %></h2>
-  <p>
-    <%= news_post.body %>
-  </p>
+  <div class="news-post">
+    <h2><%= news_post.title %></h2>
+    <p>
+      <%= news_post.body %>
+    </p>
+    <p>
+      <%= link_to("Show Details", "/news_posts/#{news_post.id}") %>
+    </p>
+  </div>
 <% end %>

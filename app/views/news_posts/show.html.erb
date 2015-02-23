@@ -1,0 +1,19 @@
+<h1>News Post page for ID: <%= @news_post.id %></h1>
+
+<p>
+  <b>Title: </b> <%= @news_post.title %>
+</p>
+
+<p>
+  <b>Body: </b> <%= @news_post.body %>
+</p>
+
+<p>
+  <b>Created At: </b> <%= @news_post.created_at %>
+</p>
+
+<p>
+  <b>Updated At: </b> <%= @news_post.updated_at %>
+</p>
+
+<%= link_to "Back to News Posts", "/news_posts" %>
