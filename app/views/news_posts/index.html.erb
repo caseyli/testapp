@@ -8,7 +8,7 @@
   Number of posts <%= @news_posts.size %>
 </p>
 
-<%= link_to "New News Post", "/news_posts/new" %>
+<%= link_to "New News Post", new_news_post_path %>
 
 <% @news_posts.each do |news_post| %>
   <div class="news-post">
@@ -17,7 +17,10 @@
       <%= news_post.body %>
     </p>
     <p>
-      <%= link_to("Show Details", "/news_posts/#{news_post.id}") %>
+      <%= link_to "Show Details", news_post  %>
+      <%= link_to "Edit Post", edit_news_post_path(news_post) %>
+      <%= link_to "Destroy Post", news_post,
+                  method: :delete, data: { confirm: "Are you sure?" } %>
     </p>
   </div>
 <% end %>

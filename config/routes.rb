@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :products
+
   root "pages#home"
 
   # type-of-request URL => controller#action
@@ -9,22 +11,29 @@ Rails.application.routes.draw do
 
   # NEWS_POST RESOURCE
 
-  # new
-  get "/news_posts/new" => "news_posts#new"
+  resources :news_posts
 
-  # create
-  post "/news_posts" => "news_posts#create"
+  # # new
+  # get "/news_posts/new" => "news_posts#new"
 
-  # index
-  get "/news_posts" => "news_posts#index"
+  # # create
+  # post "/news_posts" => "news_posts#create"
 
-  # show
-  get "/news_posts/:id" => "news_posts#show"
+  # # index
+  # get "/news_posts" => "news_posts#index"
 
-  # edit
+  # # show
+  # get "/news_posts/:id" => "news_posts#show", as: :news_post
 
-  # update
+  # # edit
+  # get "/news_posts/:id/edit" => "news_posts#edit"
 
-  # destroy
+  # # update
+  # patch "/news_posts/:id" => "news_posts#update"
+
+  # # destroy
+  # delete "/news_posts/:id" => "news_posts#destroy"
+
+  # Products Resource
 
 end

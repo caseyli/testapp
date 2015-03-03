@@ -19,8 +19,30 @@ class NewsPostsController < ApplicationController
       # do something - go back to the index
       redirect_to "/news_posts"
     else
-      # do something else - present the form again
+      render 'new'
     end
+  end
+
+  def edit
+    @news_post = NewsPost.find params[:id]
+  end
+
+  def update
+    @news_post = NewsPost.find params[:id]
+
+    if @news_post.update(news_post_params)
+      redirect_to "/news_posts"
+    else
+      render 'edit'
+    end
+
+  end
+
+  def destroy
+    @news_post = NewsPost.find params[:id]
+    @news_post.destroy
+
+    redirect_to "/news_posts"
   end
 
   private
