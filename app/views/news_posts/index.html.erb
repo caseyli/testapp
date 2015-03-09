@@ -18,9 +18,12 @@
     </p>
     <p>
       <%= link_to "Show Details", news_post  %>
-      <%= link_to "Edit Post", edit_news_post_path(news_post) %>
-      <%= link_to "Destroy Post", news_post,
-                  method: :delete, data: { confirm: "Are you sure?" } %>
+
+      <% if is_admin? %>
+        <%= link_to "Edit Post", edit_news_post_path(news_post) %>
+        <%= link_to "Destroy Post", news_post,
+                    method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
     </p>
   </div>
 <% end %>

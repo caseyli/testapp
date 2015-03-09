@@ -1,5 +1,7 @@
 class NewsPostsController < ApplicationController
 
+  before_action :deny_access_for_non_admins, except: [:index, :show]
+
   def index
     @news_posts = NewsPost.all
   end
@@ -46,6 +48,12 @@ class NewsPostsController < ApplicationController
   end
 
   private
+
+    def deny_access_for_non_admins
+      if !is_admin?
+        redirect_to root_path
+      end
+    end
 
     def news_post_params
       params.require(:news_post).permit(:title, :body)
