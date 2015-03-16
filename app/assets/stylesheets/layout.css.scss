@@ -1,0 +1,52 @@
+#header {
+  background:black;
+  padding:20px 0;
+  text-align:center;
+
+  .logo {
+    img {
+      height:100px;
+      margin-bottom:20px;
+    }
+  }
+
+  .nav {
+    a {
+      text-decoration:none;
+      display:inline-block;
+      padding:5px 10px;
+      margin:0 10px;
+      color:white;
+      border-radius:10px;
+
+      &:visited {
+        color:white;
+      }
+
+      &:hover {
+        background:white;
+        color:black;
+      }
+      
+    }
+  }
+}
+
+#content {
+  background:#eee;
+  padding:20px 0;
+
+  h1 {
+    margin:0 0 20px 0;
+  }
+
+  p {
+    margin:0;
+  }
+}
+
+#footer {
+  padding:20px 0;
+  background:#340703;
+  color:white;
+}

@@ -10,6 +10,10 @@
 
   <div id="header">
     <div class="container">
+      <div class="logo">
+        <%= image_tag "logo.png" %>
+      </div>
+
       <div class="nav">
         <%= link_to "Home", root_path %>
         <%= link_to "News Posts", news_posts_path %>
@@ -27,9 +31,18 @@
 
   </div>
 
-  <div class="container">
-    <%= yield %>
+  <div id="content">
+    <div class="container">
+      <%= yield %>
+    </div>  
   </div>
+
+  <div id="footer">
+    <div class="container">
+      Copyright (C) Casey Li, 2015
+    </div>
+  </div>
+  
 
 </body>
 </html>

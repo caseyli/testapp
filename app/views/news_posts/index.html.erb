@@ -8,7 +8,10 @@
   Number of posts <%= @news_posts.size %>
 </p>
 
-<%= link_to "New News Post", new_news_post_path %>
+<% if is_admin? %>
+  <%= link_to "New News Post", new_news_post_path %>
+<% end %>
+
 
 <% @news_posts.each do |news_post| %>
   <div class="news-post">
