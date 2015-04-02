@@ -1,9 +1,14 @@
 class NewsPostsController < ApplicationController
 
-  before_action :deny_access_for_non_admins, except: [:index, :show]
+  before_action :deny_access_for_non_admins, except: [:index, :show, :index_ajax]
 
   def index
     @news_posts = NewsPost.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @news_posts }
+    end
   end
 
   def show

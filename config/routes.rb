@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
 
   # NEWS_POST RESOURCE
-
   resources :news_posts
 
   # # new
